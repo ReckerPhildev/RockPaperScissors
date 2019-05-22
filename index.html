@@ -1,31 +1,38 @@
 
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>rockPaperScissors</title>
     </head>
     <body>
-        <script>
-            player1=input("It's your turn, what's your choice: ");
+        <script type="text/javascript">
+            
+            const playerSelection = prompt("What's your choice?")
+            const computerSelection = computerPlay()
+            console.log(playRound(playerSelection, computerSelection))
 
-
-
-            //randomly return  either rock, paper or scissors
-            function computerPlay(rock, paper, scissors){
-
+            function computerPlay(){
+                var choice=["rock", "paper", "scissors"];
+                var play=choice[Math.floor(choice.length * Math.random())];
+                alert( play);
             }
 
-            //plays a single round of rock paper and scissors
-            //return a string that declares yhe winner
-            function playRound(playerSection, computerSelection){
-              //  var winner = 
 
-                return "You Lose! " + winner + " beats Rock";
+            function playRound(playerSelection, computerSelection) {
+                // your code here!
+                if (playerSelection=="rock"&& computerSelection=="scissors" || playerSelection=="paper"&& computerSelection=="rock" || playerSelection=="scissors"&& computerSelection=="paper" ){
+                    alert("You win Phil");
+                }
+                else if(computerSelection=="rock"&& playerSelection=="scissors" || computerSelection=="paper"&& playerSelection=="rock" || computerSelection=="scissors"&& playerSelection=="paper"){
+                    alert("You loose Nigga!");
+                }
             }
+                
 
-            const playerSection = "rock"
-            const computerSelection= computerPlay()
-            console.log(playRound(playerSection, computerSelection))
+
+                
+
 
         </script>
     </body>
